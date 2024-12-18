@@ -28,6 +28,16 @@ To manually run the pre-commit hooks:
 pnpm lefthook run pre-commit
 ```
 
+## Environment Variables
+
+Environment variables are type safe thanks to [t3-env](https://github.com/t3-oss/t3-env). The environment variables schema is defined in the [env.ts](src/env.ts) file and can be accessed via the `env` object.
+
+```typescript
+import { env } from "@/env";
+
+const { PORT } = env;
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
