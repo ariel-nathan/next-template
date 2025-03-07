@@ -1,5 +1,7 @@
 /** @type {import('prettier').Options} */
 const config = {
+  semi: false,
+  trailingComma: "es5",
   tailwindFunctions: ["cn", "cva", "clsx"],
   importOrder: [
     "^(react/(.*)$)|^(react$)",
@@ -24,6 +26,6 @@ const config = {
     "@ianvs/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss",
   ],
-};
+}
 
-export default config;
+export default config

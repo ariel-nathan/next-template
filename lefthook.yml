@@ -1,10 +1,8 @@
 pre-commit:
   parallel: true
-  commands:
-    eslint:
-      glob: "*.{js,ts,jsx,tsx,mjs,cjs}"
-      run: pnpm eslint {staged_files}
-    prettier:
-      glob: "*"
-      run: pnpm prettier --write --ignore-unknown {staged_files}
+  jobs:
+    - name: eslint
+      run: bun run lint
+    - name: prettier
+      run: bun run format
       stage_fixed: true

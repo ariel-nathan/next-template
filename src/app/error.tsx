@@ -1,20 +1,20 @@
-"use client";
+"use client"
 
-import { useEffect } from "react";
+import { useEffect } from "react"
 
-import { Button } from "@/components/ui/button";
-import Container from "@/components/container";
+import { Button } from "@/components/ui/button"
+import Container from "@/components/container"
 
 export default function Error({
   error,
   reset,
 }: {
-  error: Error & { digest?: string };
-  reset: () => void;
+  error: Error & { digest?: string }
+  reset: () => void
 }) {
   useEffect(() => {
-    console.error(error);
-  }, [error]);
+    console.error(error)
+  }, [error])
 
   return (
     <Container className="items-center justify-center gap-4">
@@ -25,5 +25,5 @@ export default function Error({
       </p>
       <Button onClick={() => reset()}>Try again</Button>
     </Container>
-  );
+  )
 }
