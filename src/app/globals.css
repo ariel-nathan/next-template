@@ -5,14 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @utility container {
-  margin-inline: auto;
-  padding-inline: 2rem;
-  @media (width >= --theme(--breakpoint-sm)) {
-    max-width: none;
-  }
-  @media (width >= 1440p) {
-    max-width: 1440p;
-  }
+  @apply mx-auto max-w-[1400px] px-8;
 }
 
 :root {
